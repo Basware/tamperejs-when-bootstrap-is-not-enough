@@ -1,0 +1,28 @@
+@import '../../../variables';
+
+:host {
+  align-items: stretch;
+  display: flex;
+  min-height: 100%;
+
+  .split-layout-left-column,
+  .split-layout-right-column {
+    display: block;
+    flex: 1 1 0;
+  }
+
+  .split-layout-divider {
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: 12px;
+
+    &::before {
+      background-color: $gray-light;
+      content: '';
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+      width: 2px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<div class="split-layout-left-column" [@wider]="isWide">
+  <ng-content select=".content-left"></ng-content>
+</div>
+<div class="split-layout-divider" (click)="toggleWide()"></div>
+<div class="split-layout-right-column" [@wider]="!isWide">
+  <ng-content select=".content-right"></ng-content>
+</div>

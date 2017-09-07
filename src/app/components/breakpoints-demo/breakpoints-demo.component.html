@@ -1,0 +1,46 @@
+<div class="spacer-md"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" *ngFor="let breakpoint of breakpoints">
+
+      <!-- Breakpoint container for width -->
+      <div class="breakpoint-container border-radius gray-light-container" [ngClass]="{ 'brand-container': isCurrentWidth(breakpoint.width.name) }">
+
+        <h5>
+          <span [innerHTML]="'width ' + breakpoint.width.name"></span> (
+          <span [innerHTML]="'min: ' + (breakpoint.width.min || '-')"></span>
+          <span [innerHTML]="'max: ' + (breakpoint.width.max || '-')"></span>)
+        </h5>
+
+      </div>
+
+      <div class="spacer-md"></div>
+
+      <!-- Breakpoint container for height -->
+      <div class="breakpoint-container border-radius gray-light-container" [ngClass]="{ 'brand-container': isCurrentHeight(breakpoint.height.name) }">
+        <h5>
+          <span [innerHTML]="'height ' + breakpoint.height.name"></span> (
+          <span [innerHTML]="'min: ' + (breakpoint.height.min || '-')"></span>
+          <span [innerHTML]="'max: ' + (breakpoint.height.max || '-')"></span>)
+        </h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="spacer-md"></div>
+  <div class="row">
+    <div class="col col-auto">
+
+      <!-- We bind resize listener to this element -->
+      <div class="scroll-demo resizable grid-background" #monitorElement></div>
+
+    </div>
+    <div class="col gray-light-container">
+      <div class="spacer-md"></div>
+      <div class="current-element-size">
+        <h6 [innerHTML]="'width: ' + getMonitorElementWidth()"></h6>
+        <h6 [innerHTML]="'height: ' + getMonitorElementHeight()"></h6>
+      </div>
+    </div>
+  </div>
+</div>

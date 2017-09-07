@@ -1,0 +1,34 @@
+<app-split-layout>
+  <div class="content-left">
+    <div class="container-fluid">
+        <div class="row table-header">
+          <div class="col-2">
+            Name
+          </div>
+          <div class="col">
+            Description
+          </div>
+          <div class="col-2">
+            Status
+          </div>
+          <div class="col-2">
+            Last seen
+          </div>
+        </div>
+        <div class="items">
+          <div class="row" *ngFor="let item of items">
+            <div class="col-2" [innerHTML]="item.name"></div>
+            <div class="col" [innerHTML]="item.description"></div>
+            <div class="col-2" [innerHTML]="item.status"></div>
+            <div class="col-2"> Yesterday at 15:30</div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="content-right">
+    <div class="container-fluid">
+      <b>ATTACHMENTS:</b><br>
+      <img class="border-radius" src="/assets/imgs/responsive-meme.jpg">
+    </div>
+  </div>
+</app-split-layout>

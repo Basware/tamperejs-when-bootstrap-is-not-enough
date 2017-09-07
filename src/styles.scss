@@ -1,0 +1,153 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $off-white;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+.demo-container {
+  align-self: stretch;
+  display: block;
+  flex: 1 0 auto;
+}
+
+.resizable,
+.resizable-horizontal,
+.resizable-vertical {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  min-width: 100px;
+  overflow: auto;
+  width: 100px;
+}
+
+.resizable {
+  resize: both;
+}
+
+.resizable-horizontal {
+  resize: horizontal;
+}
+
+.resizable-vertical {
+  resize: vertical;
+}
+
+.gray-light-container {
+  background-color: $gray-light;
+}
+
+.brand-container {
+  background-color: $brand-color;
+  color: $white;
+}
+
+.border-radius {
+  border-radius: $border-radius;
+}
+
+.resize-listener {
+  position: relative;
+}
+
+.sensor {
+  bottom: 5px;
+  left: 5px;
+  overflow: auto;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.shrink-sensor-content {
+  height: 200%;
+  width: 200%;
+}
+
+.expand-sensor-content {
+  height: 10000px;
+  width: 10000px;
+}
+
+.grid-background {
+  background-image: url('/assets/imgs/grid-bg.png');
+}
+
+.spacer- {
+  &md {
+    height: 15px;
+    width: 100%;
+  }
+
+  &lg {
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.scroll-demo {
+  height: 70px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.resize-listener-target {
+  position: relative;
+}
+
+.resize-listener-wrapper {
+  bottom: 0;
+  display: hidden;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0s;
+  z-index: -1;
+
+  .resize-listener-expand-sensor,
+  .resize-listener-shrink-sensor {
+    bottom: 0;
+    left: 0;
+    min-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0s;
+  }
+
+  .resize-listener-expand-sensor {
+    .resize-listener-expand-content {
+      height: 10000px;
+      width: 10000px;
+    }
+  }
+
+  .resize-listener-shrink-sensor {
+    .resize-linstener-shrink-content {
+      height: 200%;
+      width: 200%;
+    }
+  }
+}
+
+pt-split-layout {
+  display: block;
+  width: 100%;
+
+  .pt-split-layout {
+    min-height: 100%;
+  }
+}
+

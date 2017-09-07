@@ -1,0 +1,46 @@
+<!--<div class="resize-listener-element" tjsResizeListener>
+
+</div>-->
+<div class="spacer-md"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-3">
+      <h4>Scroll listeners</h4>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-secondary" (click)="eventsLog = []">Reset events log</button>
+      <label class="pt-native-checkbox">
+              <input  type="checkbox" id="disableToggle" [(ngModel)]="stripEqualEvents"/>
+              <i></i><span>Strip equal events</span>
+          </label>
+    </div>
+    <div class="spacer-md"></div>
+  </div>
+  <div class="row">
+    <div class="col col-auto">
+
+      <!-- Monitored element-->
+      <div class="scroll-demo resizable" #monitorElement>
+        <div class="scroll-sensor" #sensorExpand id="expand">
+          <div class="grid-background expand-sensor-content"></div>
+        </div>
+        <div class="scroll-sensor" #sensorShrink id="shrink">
+          <div class="grid-background shrink-sensor-content">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col gray-light-container">
+    </div>
+  </div>
+  <div class="spacer-md"></div>
+  <div class="row">
+    <div class="col">
+      <h5>Events:</h5>
+      <ul>
+        <li *ngFor="let event of eventsLog" [innerHTML]="event"></li>
+      </ul>
+    </div>
+  </div>
+</div>

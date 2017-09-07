@@ -1,0 +1,49 @@
+<div class="spacer-md"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-4">
+      <h4>Scroll with 10000px X 10000px content size</h4>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-secondary" (click)="resetFixedScrollbar()">Reset scrollbar</button>
+    </div>
+    <div class="spacer-md"></div>
+  </div>
+  <div class="row">
+    <div class="col col-auto">
+
+      <!-- Element width fixed  content size -->
+      <div class="scroll-demo resizable-horizontal" #scrollbarFixedContent>
+        <div class="grid-background expand-sensor-content"></div>
+      </div>
+
+    </div>
+    <div class="col gray-light-container">
+    </div>
+  </div>
+</div>
+<div class="spacer-md"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-4">
+      <h4>Scroll with 200% X 200% content size</h4>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-secondary" (click)="resetPercentageScrollbar()">Reset scrollbar</button>
+    </div>
+    <div class="spacer-md"></div>
+  </div>
+  <div class="row">
+    <div class="col col-auto">
+
+      <!-- Element width percentage content size -->
+      <div class="scroll-demo resizable-horizontal" #scrollbarPercentageContent>
+        <div class="grid-background shrink-sensor-content">
+        </div>
+      </div>
+
+    </div>
+    <div class="col gray-light-container">
+    </div>
+  </div>
+</div>

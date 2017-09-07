@@ -1,0 +1,30 @@
+@import '../../../variables';
+
+:host {
+  align-items: stretch;
+  display: flex;
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+.items {
+  .row {
+    &:nth-child(odd) {
+      background-color: $gray-light;
+    }
+  }
+}
+
+.content-right {
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.card {
+  margin-bottom: 15px;
+  padding: 10px;
+}

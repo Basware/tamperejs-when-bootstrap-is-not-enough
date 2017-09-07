@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+$border-color-xs: $brand-color;
+$border-color-md: #2f2f72;
+$border-color-lg: #dd8839;
+
+$bg-color-xs: #e1ecf2;
+$bg-color-md: #486472;
+$bg-color-lg: #9ad4f4;
+
+.link-container,
+.size-container {
+  padding: 15px;
+}
+
+.link-container {
+  border-style: solid;
+  border-width: 2px;
+
+  &.width-xs {
+    border-color: $border-color-xs;
+  }
+
+  &.width-md {
+    border-color: $border-color-md;
+  }
+
+  &.width-lg {
+    border-color: $border-color-lg;
+  }
+
+  &.height-xs {
+    background-color: $bg-color-xs;
+  }
+
+  &.height-md {
+    background-color: $bg-color-md;
+    color: $white;
+  }
+
+  &.height-lg {
+    background-color: $bg-color-lg;
+  }
+}

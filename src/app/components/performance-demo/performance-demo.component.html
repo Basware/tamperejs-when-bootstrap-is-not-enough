@@ -1,0 +1,72 @@
+<div class="spacer-md"></div>
+<div class="container-fluid">
+
+  <!-- Listener elements -->
+  <div class="row">
+    <div class="col">
+      <div 
+        class="gray-light-container border-radius text-center link-container"
+        appResizeListener
+        [linkToListener]="listener2Id">
+        CONTAINER 1
+      </div>
+    </div>
+    <div class="col">
+      <div 
+        class="gray-light-container border-radius text-center link-container"
+        appResizeListener
+        [linkToListener]="listener1Id">
+        CONTAINER 2
+      </div>
+    </div>
+    <div class="col">
+      <div 
+        class="gray-light-container border-radius text-center link-container"
+        appResizeListener
+        [linkToListener]="listener2Id">
+        CONTAINER 3
+      </div>
+    </div>
+    <div class="col">
+      <div
+        class="gray-light-container border-radius text-center link-container"
+        appResizeListener
+        [linkToListener]="listener2Id">
+        CONTAINER 4
+      </div>
+    </div>
+  </div>
+
+
+  <div class="spacer-md"></div>
+
+  <!-- Monitored elements -->
+  <div class="row">
+    <div class="col col-auto">
+        <div
+          class="scroll-demo resizable grid-background"
+          [appResizeListener]="listener1Id"
+          [breakpoints]="breakpoints"></div>
+    </div>
+    <div
+      class="col gray-light-container"
+      [appResizeListener]="listener2Id"
+      [breakpoints]="breakpoints">
+    </div>
+  </div>
+
+  <div class="spacer-md"></div>
+  <div class="row">
+    <div class="col">
+      <div class="gray-light-container border-radius text-center size-container">
+        <h6 [innerHTML]="'width: ' + getWidthName(breakpoint1)"></h6>
+        <h6 [innerHTML]="'height: ' + getHeightName(breakpoint1)"></h6>
+      </div>
+    </div>
+    <div class="col">
+        <div class="gray-light-container border-radius text-center size-container">
+            <h6 [innerHTML]="'width: ' + getWidthName(breakpoint2)"></h6>
+            <h6 [innerHTML]="'height: ' + getHeightName(breakpoint2)"></h6>
+          </div>
+    </div>
+</div>
